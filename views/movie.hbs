@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/movie-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="../js/script.js" defer></script> -->
+    <script src="../js/movie.js" defer></script>
+    <title>Binge⁐it - Watch Trailers, Search for movies and much more</title>
+</head>
+
+<body>
+    <!-- ####################################### navbar ################################################# -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="boxwrapper">
+                <div class="logo">
+                    <h2 class="logo-text">Binge⁐it</h2>
+                </div>
+
+                <ul class="navbar-items">
+                    <li class="item RN"><a href="/index">Home</a></li>
+                    <li class="item RN"><a href="./movie">Movies</a></li>
+                    <li class="item RN"><a href="./movie">Genre</a></li>
+                    <li class="item RN"><a href="./about">About</a></li>
+                    {{!-- <li class="item RN"><a href="./about">Contact</a></li> --}}
+                    <li><span class="item navbar-search-icon fa-solid fa-magnifying-glass"></span></li>
+                    <div class="hamburger">
+                        <li class="item hamburger-icon"><span class="fa-solid fa-bars"onclick="openNavbar()"></span>
+                            <div id="hamburger-sidemenu" class="sidenav">
+                                <i class="closebtn fa-solid fa-xmark" onclick="closeNavbar()"></i>
+                                <a href="/index">Home</a>
+                                <a href="/movie">Movies</a>
+                                <a href="/movie">Genre</a>
+                                <a href="/about">About</a>
+                            </div>
+                        </li>   
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- #################################### search bar ################################## -->
+
+    <div class="searchbar">
+        <div class="form container">
+            <form action="">
+                <i class="searchtool fa-solid fa-magnifying-glass" style="color: black;"></i>
+                <i class="cross fa-solid fa-xmark"></i>
+                <input class="search" type="text" name="searchbar" id="" autocomplete="off"
+                    placeholder="Search for a movie, tv show....">
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- ################################ page starts ########################## -->
+    <div class="movies-list">
+        <div class="list-boxwrapper container">
+            <div class="genre-column">
+                <p class="title bold-title">Categories</p>
+                <div class="genre-item-container">
+                    <p class="genre-item default_movies">All Movies</p>
+                    <!-- <p class="genre-item">horror</p> -->
+                </div>
+            </div>
+
+            <div class="movie-column">
+
+                <div class="all-movies">
+
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+                    <div class="movie-item">
+                         <div class="movie-imgbox">
+                            <a href=""><img src="../images/temp_waiting.png" alt="img"></a>
+                        </div>
+                        <!-- <div class="movie-textbox">
+                            <a href="" style="text-decoration:none; color:white;">
+                                <p class="movie-title bold-title" style="font-size: 1.85rem; font-weight: 600;">The
+                                    Wrath of God</p>
+                            </a>
+                            <p class="light-date"
+                                style="font-size: 1.65rem;color:rgba(0, 0, 0, 0.380);margin-top: 0.15em;">3 feb 2022</p>
+                            <p class="overview">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum
+                                pariatur sunt earum numquam
+                                natus hic accusamus harum facilis eaque repellendus.</p>
+                        </div>  -->
+                    </div>
+
+                </div>
+
+                <div class="more"> <button class="allMovies-load-more btn1">Load More</button> </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ######################################## footer section ################################### -->
+    <div class="footer-section">
+        <div class="logo-section">
+            <h2 class="logo-text">Binge⁐it</h2>
+        </div>
+        <div class="imp-links">
+            <div class="legal">
+                <h2>LEGAL</h2>
+                <a href="https://www.themoviedb.org/documentation/api">
+                    <p>API overview</p>
+                </a>
+                <a href="https://www.themoviedb.org/documentation/api/terms-of-use">
+                    <p>API Terms of Use</p>
+                </a>
+                <a href="https://developers.themoviedb.org/3">
+                    <p>API documentation</p>
+                </a>
+            </div>
+            <div class="sm-handles">
+                <h2>IMPORTANT LINKS</h2>
+                <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/">
+                    <p>LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/themoviedb?lang=en">
+                    <p>Twitter</p>
+                </a>
+                <a href="https://www.facebook.com/themoviedb/">
+                    <p>Facebook</p>
+                </a>
+                <a href="">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="register">
+                <h2>Categories</h2>
+                <a href="./movie">
+                    <p>Adventure</p>
+                </a>
+                <a href="./movie">
+                    <p>Action</p>
+                </a>
+                <a href="./movie">
+                    <p>Documentary</p>
+                </a>
+                <a href="./movie">
+                    <p>Many More to Explore</p>
+                </a>
+            </div>
+        </div>
+        <div class="sm-handles-icon">
+            <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/themoviedb?lang=en"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/themoviedb/"><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright-text">
+            <p class="confession">Made with <i class="fa-solid fa-heart"></i> by Abhishek Kr.</p>
+            <p>Copyright © 2022, &nbsp all rights reserved to Movies Mania.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

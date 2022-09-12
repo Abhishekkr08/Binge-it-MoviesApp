@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/api-config.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <title>Binge⁐it - Watch Trailers, Search for movies and much more</title>
+</head>
+
+<body>
+
+    <!-- ######################################### overlay-section started #################################### -->
+    <div class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <div class="carousel-items">
+            <p class="carousel-heading">Trailer</p>
+            <i class="cross fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Rt2LHkSwdPQ?autoplay=0&hl=en&autohide=0"
+            title="YouTube video player" frameborder="0" allow="accelerometer;" allowfullscreen></iframe> -->
+
+            <!-- error handling -->
+        </div>
+
+        <div class="not_found_video hide">
+            <p>Not available for this movie <br> coming soon</p>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ######################################### navbar started #################################### -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="boxwrapper expanded-nav">
+                <div class="logo left-wrapper">
+                    <h2 class="logo-text">Binge⁐it</h2>
+                    <div class="rifle">
+                        <li class="item popular LW"><a href="#Popular">Popular</a></li>
+                        <li class="item kids LW"><a href="#Kids">Kids</a></li>
+                        <li class="item movies"><a href="#reviews">Reviews 💌</a></li>
+                    </div>
+                </div>
+
+                <ul class="navbar-items">
+                    <li class="item home"><a href="/index">Home</a></li>
+                    <li class="item genre LW dropdown"><a class="dropbtn" href="#">Genre</a>
+                        <div class="dropdown-content">
+                            <a class="DD" href="/movie">Action</a>
+                            <a class="DD" href="/movie">Adventure</a>
+                            <a class="DD" href="/movie">Horror</a>
+                            <a class="DD" href="/movie">Documentary</a>
+                        </div>
+
+                    </li>
+                    <li class="item about"><a href="/about">About</a></li>
+                    <li class="item about"><a href="/logout">LogOut</a></li>
+                    <li class="item" style="text-transform: capitalize; border: 1px solid white; border-radius:8px; padding: 2px 0 2px 0" ><a>{{name}} 😋</a></li>
+                </ul>
+
+            </div>
+
+            <div class="hamburger">
+                <li class="item hamburger-icon"><span class="fa-solid fa-bars" onclick="openNavbar()"></span>
+                    <div id="hamburger-sidemenu" class="sidenav">
+                        <i class="closebtn fa-solid fa-xmark" onclick="closeNavbar()"></i>
+                        <a href="/index">Home</a>
+                        <a href="/movie">Movies</a>
+                        <a href="/movie">Genre</a>
+                        <a href="/about">About</a>
+                        <a href="/logout">log Out</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ######################################### header started #################################### -->
+    <div class="header-section">
+        <div class="container">
+            <div class="content">
+                <div class="text-content">
+                    <h1 style="text-transform: capitalize;">Welcome {{name}}.</h1>
+                    <h2>Discover lots of Movies, TV shows.Explore Now</h2>
+                    <form action="" class="form">
+                        <input class="search" type="text" name="" id="" placeholder="Search for a movie...">
+                        <button id="button" class="btn1">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ############################trending section ######################### -->
+    <div class="trending-section">
+        <div class="container">
+            <div class="title">
+                <p class="title-font-styling">Trending</p>
+                <div class="selector">
+                    <p class="s-first effect">This week</p>
+                    <p class="s-second">Today</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="TS-boxwrapper">
+                <!-- a sample movie -->
+                <div class="movie">
+
+                    <!-- <a href="html/details.html" class="hover-movie">
+                       <div class="img-box">
+                        <img src="../images/sample.jpg" alt="img">
+                       </div>
+                    </a>
+
+                    <div class="rating yellow">
+                        <p>9.0</p>
+                    </div>
+                   
+
+                    <div class="text-content">
+                        <p class="bold-title">Movie title</p>
+                         <p class="light-date">01 jan 2000</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ################################ All Time Favourites ########################### -->
+    <div class="all-time-favourites ">
+
+        <div class="ALT-text-box">
+
+            <h1 class="ALT-title">TITLE</h1>
+
+            <div class="ALT-four-items">
+                <p class="FI year">2022</p>
+                <p class="FI ALT-rating">9.1/10</p>
+                <p class="FI single-genre">Action</p>
+                <p class="FI length-of-movie">1h 55min</p>
+            </div>
+
+            <div class="ALT-overview">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sit similique officia error saepe
+                    omnis, voluptatem ipsam architecto expedita adipisci rerum sapiente repudiandae asperiores odio
+                    totam quam blanditiis accusantium iste quisquam alias facilis explicabo aliquid. Neque, dolore
+                    magnam numquam sit placeat, labore nisi totam omnis corrupti culpa id, laboriosam quo!.</p>
+            </div>
+
+            <div class="ALT-two-items">
+                <a href="" class="TI know-more">Know More</a>
+                <p class="TI released">Released</p>
+            </div>
+            <p class="Next_btn"><span class="fa-solid fa-play"></span></p>
+
+            <p class="watch-trailer"><span class="fa-solid fa-play"></span>
+                Watch Trailer
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ############################ kids section ###################### -->
+    <div class="kids-section" id="Kids">
+        <div class="container">
+            <div class="title">
+                <p class="title-font-styling">Kids Favourites
+                </p>
+            </div>
+
+
+            <div class="KS-boxwrapper">
+                <!-- a sample movie -->
+                <div class="movie">
+
+                    <!-- <a href="html/search_page.html" class="hover-movie">
+                        <div class="img-box">
+                            <img src="../images/sample.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <div class="rating yellow">
+                        <p>9.0</p>
+                    </div>
+
+
+                    <div class="text-content">
+                        <p class="bold-title">Movie title</p>
+                        <p class="light-date">01 jan 2000</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ########################### what's popular movies ################################ -->
+    <div class="popular-section" id="Popular">
+        <div class="container">
+            <div class="title">
+                <p class="title-font-styling">What's Popular
+                </p>
+            </div>
+
+
+            <div class="PS-boxwrapper">
+                <!-- a sample movie -->
+                <div class="movie">
+
+                    <!-- <a href="html/search_page.html" class="hover-movie">
+                        <div class="img-box">
+                            <img src="../images/sample.jpg" alt="img">
+                        </div>
+                    </a>
+
+                    <div class="rating yellow">
+                        <p>9.0</p>
+                    </div>
+
+
+                    <div class="text-content">
+                        <p class="bold-title">Movie title</p>
+                        <p class="light-date">01 jan 2000</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--################################### User reviews section ##############################################-->
+
+    <div id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="title">
+                <p class="title-font-styling">What our Users Say
+                </p>
+            </div>
+            <div class="reviews-wrapper">
+
+                <div class="reviews-model">
+
+                    <div class="user-info">
+                        <div class="imgbox">
+                            <img src="../images/temp_waiting.png" alt="img">
+                        </div>
+                        <div class="user-name">
+                            <p class="special-username">Tom Holland</p>
+                        </div>
+                    </div>
+
+                    <div class="user-review">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor possimus iure natus illum
+                            quaerat
+                            quasi inventore accusantium ducimus exercitationem perspiciatis.</p>
+                    </div>
+
+                </div>
+                {{!--
+                <div class="reviews-model">
+
+                    <div class="user-info">
+                        <div class="imgbox">
+                            <img src="../images/temp_waiting.png" alt="img">
+                        </div>
+                        <div class="user-name">
+                            <p class="special-username">Tom Holland</p>
+                        </div>
+                    </div>
+
+                    <div class="user-review">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor possimus iure natus illum
+                            quaerat
+                            quasi inventore accusantium ducimus exercitationem perspiciatis.</p>
+                    </div>
+
+                </div> --}}
+
+            </div>
+
+
+{{!-- adding review --}}
+            <div class="add-review">
+
+                <p class="leave-rev title-font-styling">Leave a review</p>
+
+                <form class="form-section-review" action="/index" method="POST">
+                    <input type="text" name="review" value="" required> <br><br>
+                    <input class="submit-btn " type="submit" value="Submit">
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ######################################## footer section ################################### -->
+    <div class="footer-section">
+        <div class="logo-section">
+            <h2 class="logo-text">Binge⁐it</h2>
+        </div>
+        <div class="imp-links">
+            <div class="legal">
+                <h2>LEGAL</h2>
+                <a href="https://www.themoviedb.org/documentation/api">
+                    <p>API overview</p>
+                </a>
+                <a href="https://www.themoviedb.org/documentation/api/terms-of-use">
+                    <p>API Terms of Use</p>
+                </a>
+                <a href="https://developers.themoviedb.org/3">
+                    <p>API documentation</p>
+                </a>
+            </div>
+            <div class="sm-handles">
+                <h2>IMPORTANT LINKS</h2>
+                <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/">
+                    <p>LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/themoviedb?lang=en">
+                    <p>Twitter</p>
+                </a>
+                <a href="https://www.facebook.com/themoviedb/">
+                    <p>Facebook</p>
+                </a>
+                <a href="">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="register">
+                <h2>Categories</h2>
+                <a href="/movie">
+                    <p>Adventure</p>
+                </a>
+                <a href="/movie">
+                    <p>Action</p>
+                </a>
+                <a href="/movie">
+                    <p>Documentary</p>
+                </a>
+                <a href="/movie">
+                    <p>Many More to Explore</p>
+                </a>
+            </div>
+        </div>
+        <div class="sm-handles-icon">
+            <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/themoviedb?lang=en"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/themoviedb/"><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright-text">
+            <p class="confession">Made with <i class="fa-solid fa-heart"></i> by Abhishek Kr.</p>
+            <p>Copyright © 2022, &nbsp all rights reserved to Movies Mania.</p>
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+    console.log("hey there");
+    const userList = async () => {
+        try {
+            let res = await fetch('https://binge-it09.herokuapp.com/api/reviews')
+            let list = await res.json();
+            showReveiws(list)
+        }
+        catch {
+            console.log('failed to fetch the data from api');
+        }
+    }
+    const review_wrapper = document.querySelector('.reviews-wrapper');
+
+    function showReveiws(list) {
+        review_wrapper.innerHTML = "";
+        list.forEach((item) => {
+            let name = item.username;
+            let review = item.review;
+            let date = item.date;
+            const reviewE1 = document.createElement('div');
+            reviewE1.classList.add("reviews-model");
+            reviewE1.innerHTML = `<div class="user-info">
+                        <div class="imgbox">
+                            <img src="../images/avatar3.jpg" alt="img">
+                        </div>
+                        <div class="user-name">
+                            <p class="special-username">${name}</p>
+                            <p class="special-date">${date}</p>
+                        </div>
+                    </div>
+
+                    <div class="user-review">
+                        <p>“${review}”</p>
+                    </div>`
+
+            review_wrapper.appendChild(reviewE1);
+            
+        })
+    }
+
+    userList();
+
+</script>
+
+
+</html>

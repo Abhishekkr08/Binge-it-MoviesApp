@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Staatliches&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    --scrollerGrey: 219, 219, 219;
+    --lightGrey: 227, 227, 227;
+    --darkerGrey: 200, 200, 200; 
+    --DarkBlue: 3, 37, 65;
+    --LightBlue: 1, 180, 228;
+    --LighterGreen: 192, 254, 207;
+    --LightGreen: 30, 213, 169;
+    --LogoGreen: 144, 206, 161;
+    --LogoOrange: 253, 193, 112;
+    --LogoRed: 217, 59, 99;
+    --accountSilver: 149, 149, 149;
+    --accountPink: 234, 20, 140;
+    --accountPurple: 128, 91, 231;
+    --accountGreen: 1, 210, 119;
+    --accountTeal: 1, 198, 172;
+    --accountLightBlue: 1, 180, 228;
+    --accountBlue: 1, 119, 210;
+    --accountOrange: 210, 119, 1;
+    --accountYellow: 210, 144, 1;
+    --accountRed: 212, 2, 66;
+    --imageBorderRadius: 8px;
+    --border1: 2px solid red;
+    --border2: 2px solid black;
+    --border3: 2px solid blue;
+    --thinborder: 1px solid green;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+/* #####################utitlity classes starts############################# */
+.navbar-container {
+    /*make separate container for navbar bcoz this navbar will be removed for small screens except for navbar*/
+    max-width: 1300px;
+    width: 90%;
+    /* border: var(--border2); */
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn1 {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(var(--LightGreen), 1) 0%, rgba(var(--LightBlue), 1) 100%);
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 0.95em 1.8em;
+    border-radius: 35px;
+}
+
+.bold-title {
+    font-size: 1.6rem;
+    margin: 0.15em 0em -0.1em 0em;
+    font-weight: 700;
+    line-height: 1.35em;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+}
+
+.light-date {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6rem;
+}
+
+.title-font-styling {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/* ############################### navbar section ############################## */
+
+.navbar {
+    width: 100%;
+    height: 64px;
+    background-color: rgba(var(--DarkBlue), 1);
+    padding: 1em;
+    position: relative;
+}
+
+.navbar .boxwrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border3); */
+    padding: 0 3.5em;
+}
+
+
+.logo-text {
+    background: linear-gradient(to right, #c0fef9 10%, rgb(0, 221, 255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.logo.left-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.rifle{
+    display: none;
+} */
+
+.navbar .popular.LW {
+    margin-left: 3em;
+}
+
+
+.left-wrapper li a:hover {
+    color: cyan;
+}
+
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+}
+
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    margin: 1.2em;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
+}
+
+
+.navbar-items li a:hover {
+    color: cyan;
+}
+
+.navbar-search-icon:hover {
+    color: cyan;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.item.genre .dropdown-content {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    top: 100%;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Links inside the dropdown */
+.item.genre .dropdown-content a {
+    border-radius: 8px;
+    display: block;
+    color: black;
+    padding: 15px 13px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 0;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.25s ease-in-out;
+    display: block;
+}
+
+
+.hamburger {
+    /* border: var(--border1); */
+    margin-left: -5em;
+    position: absolute;
+    left: 94.7%;
+    top: 8.4%;
+}
+
+.hamburger-icon {
+    font-size: 2.35rem;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.hamburger-icon:hover {
+    color: cyan;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: rgba(var(--DarkBlue),0.98); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 30px;
+    /* margin-top: 2em ; */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  #hamburger-sidemenu a {
+    padding: 8px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color:  white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  #hamburger-sidemenu a:hover {
+    color: cyan;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 1%;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+    font-size: 2.6rem;
+  }
+
+
+
+
+
+  /* aboutsection */
+
+  .about-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+
+   .imgbox {
+    width: 400px;
+}
+
+.imgbox img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.textbox{
+    font-size: 2.5rem;
+}
+
+
+
+
+
+/* ############################### footer section ############################## */
+
+.footer-section {
+    margin-top: 8em;
+    background-color: rgba(var(--DarkBlue));
+    /* border: var(--border2); */
+    color: white;
+    padding: 2em 2em 0em 2em;
+}
+
+.footer-section h2 {
+    font-size: 2.2rem;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.footer-section p {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+.logo-section {
+    text-align: center;
+    /* border: var(--border1); */
+    padding: 2em;
+    margin-bottom: 1.5em;
+}
+
+.imp-links {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.legal,
+.sm-handles,
+.register {
+    margin: 0 5em;
+    text-align: center;
+}
+
+.footer-section i {
+    /* border: var(--border1); */
+    margin: 0.5em 1em;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.643);
+    transition: color 120ms ease-in-out;
+}
+
+.footer-section i:hover {
+    color: cyan;
+
+}
+
+
+.sm-handles-icon {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-text {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.copyright-text p {
+    font-size: 1.45rem;
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession {
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession i {
+    margin: 0 0.2em;
+    font-size: 1.2rem;
+    /* color: rgb(240, 37, 37); */
+    color: cyan;
+}
+
+
+
+
+
+
+/* ################### media query $###################### */
+
+
+@media (max-width: 570px) {
+    
+    .container {
+        width: 100%;
+    }
+    /*to be used in other stylesheets too*/
+
+    .logo-text{
+        margin-left: -1.12em;
+    }
+
+    .navbar-items>.RN{
+        display: none;
+    }
+
+    .footer-section {
+        margin-top: 15em;
+    }
+
+    .legal,
+    .sm-handles,
+    .register {
+        margin: 2em;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+     
+    
+}
+
+@media (min-width : 570px) and (max-width : 700px) {
+    .navbar-items>.RN{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .footer-section{
+        margin-top: 10em;
+    }
+
+    .legal,
+    .sm-handles,
+    .register {
+        margin: 2em;
+    }
+
+
+}
+
+@media (max-width : 570px){
+   
+ .movie-item{
+    width: 96%;
+ }
+
+}
+
+

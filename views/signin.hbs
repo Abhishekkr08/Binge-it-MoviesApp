@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/signin.css">
+    <title>Binge⁐it - Watch Trailers, Search for movies and much more</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="boxwrapper expanded-nav">
+                <div class="logo left-wrapper">
+                    <h2 class="logo-text">Binge⁐it</h2>
+                </div>
+
+                <ul class="navbar-items">
+                    <li class="item"><a href="/index">Home</a></li>
+                    <li class="item"><a href="/">Signin</a></li>
+                    <li class="item"><a href="/signup">Signup</a></li>
+                </ul>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--########################## main page ######################### -->
+
+    <div class="container" id="container">
+
+        <div class="form-container sign-up-container">
+            <form action="/signup" method="POST">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a class="social"><img src="../images/avatar4.jpg" alt=""></a>
+                </div>
+                <p style="margin: 5px; color:red; padding:0;">{{msg}}</p>
+                <input class="firstname" type="text" name="firstname" placeholder="First Name*" value="">
+                <input class="lastname" type="text" name="lastname" placeholder="Last Name*" value="">
+                <input class="email" type="email" name="email" placeholder="Email*" value="">
+                <input class="username" type="text" name="username" placeholder="Username*" value="">
+                <input class="password" type="password" name="password" placeholder="Password*" value="">
+                <input class="confirmpassword" type="password" name="confirmpassword" placeholder="Confirm Password*"
+                    value="">
+                <!-- <input class="user-details-postBtn" type="submit" value="Submit"> -->
+                <p>Already a user? Click <b><a style="color:#006fb0 ;" href="/">here </a></b>to signin </p>
+                <button style="margin-top: 0em;">Register</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="/signin" method="POST">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a class="social"><img src="../images/avatar3.jpg" alt=""></a>
+                </div>
+                <input type="email" name="email" placeholder="Email" value="" required>
+                <input type="password" name="password" placeholder="Password" value="" required>
+                <p style="margin: 5px; color:red; padding:0;">{{msg}}</p>
+                <p style="margin: 5px; color:red; padding:0;">{{unauthorisedAcess_msg}}</p>
+                <p style="margin: 5px; color:rgb(0, 145, 0); padding:0;">{{logout_msg}}</p>
+                <p>New User? Click on <a href="/signup" style="color: #006fb0;"><b>signup</b> </a> to Register</p>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome To Binge⁐it ! Discover lots of Movies, TV shows.Explore Now</h1>
+                    <p>Already a user ? please click below to sign in</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Confused About What To Watch ?? </h1>
+                    <p style="text-transform: capitalize;">Binge⁐it provides you a wide genre of movies and tv shows so
+                        watch Trailers , see overview , get crew and casts
+                        and much more about any movie, Before Binge Watching it. </p> <br>
+                    <p>New User? Please click below to Register Yourself </p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer-section">
+        <div class="copyright-text">
+            <p style="font-size: 1rem;" class="confession">Made with <i class="fa-solid fa-heart"></i> by Abhishek Kr.
+            </p>
+            <p style="font-size: 1rem;">Copyright © 2022 Binge it</p>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+</html>

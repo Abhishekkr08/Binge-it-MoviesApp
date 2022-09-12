@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Staatliches&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    --DarkBlue: 3, 37, 65;
+    --LightBlue: 1, 180, 228;  
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+/* #####################utitlity classes starts############################# */
+
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.navbar {
+    width: 100%;
+    height: 64px;
+    background-color: #032541;
+    padding: 1em;
+    position: relative;
+}
+
+.content {
+    margin-top: 5em;
+    text-align: center;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2em;
+}
+
+.title{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+}
+
+.imgbox {
+    /* border: 2px solid red; */
+    width: 15vw;
+    margin: auto;
+    margin-bottom: 4em;
+}
+
+.imgbox img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imgbox2{
+    width: 20vw;
+    margin: auto;
+    /* margin-bottom: 4em; */
+}
+.imgbox2 img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.desc{
+    text-align:left;
+    font-size: 1.95rem;
+    color: rgb(57, 57, 57);
+}
+
+.footer-section {
+    margin-top: 17em;
+    background-color: rgba(var(--DarkBlue));
+    /* border: var(--border2); */
+    color: white;
+    padding: 2em 2em 0em 2em;
+}
+
+
+.copyright-text {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.copyright-text p {
+    font-size: 1.45rem;
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession {
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession i {
+    margin: 0 0.2em;
+    font-size: 1.2rem;
+    /* color: rgb(240, 37, 37); */
+    color: cyan;
+}
+
+.cont-btn a{
+    margin-top: 1em;
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgba(var(--DarkBlue));
+    padding: 0.6em 2.5em;
+    font-size: 1.9rem;
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    color: white;
+    border: 2px solid #032541;
+    transition: all 0.3s ease-in-out;
+}
+
+.cont-btn a:hover{
+    border: 2px solid  black;
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+@media (max-width:500px){
+    .content {
+        margin-top: 6em;
+    }
+     
+    .imgbox{
+        width: 200px;
+    }
+    .imgbox2{
+        width: 200px;
+    }
+    .container{
+        width: 75%;
+    }
+}

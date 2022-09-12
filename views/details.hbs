@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="../js/script.js" defer></script> -->
+    <script src="../js/details.js" defer></script>
+    <title>Binge⁐it - Watch Trailers, Search for movies and much more</title>
+</head>
+
+<body>
+
+
+
+    <!-- ######################################### overlay-section started #################################### -->
+    <div class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <div class="carousel-items">
+            <p class="carousel-heading">Trailer</p>
+            <i class="cross fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Rt2LHkSwdPQ?autoplay=0&hl=en&autohide=0"
+            title="YouTube video player" frameborder="0" allow="accelerometer;" allowfullscreen></iframe> -->
+
+            <!-- error handling -->
+        </div>
+
+        <div class="not_found_video hide">
+            <p>Not available for this movie <br> coming soon</p>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- ######################################### navbar started #################################### -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="boxwrapper">
+                <div class="logo">
+                    <h2 class="logo-text">Binge⁐it</h2>
+                </div>
+
+                <ul class="navbar-items">
+                    <li class="item RN"><a href="/index">Home</a></li>
+                    <li class="item RN"><a href="./movie">Movies</a></li>
+                    <li class="item RN"><a href="/movie">Genre</a></li>
+                    <li class="item RN"><a href="./about">About</a></li>
+                    <li class="item"><span class="item navbar-search-icon fa-solid fa-magnifying-glass"></span></li>
+                    <div class="hamburger">
+                        <li class="item hamburger-icon"><span class="fa-solid fa-bars"onclick="openNavbar()"></span>
+                            <div id="hamburger-sidemenu" class="sidenav">
+                                <i class="closebtn fa-solid fa-xmark" onclick="closeNavbar()"></i>
+                                <a href="/index">Home</a>
+                                <a href="./movie">Movies</a>
+                                <a href="./movie">Genre</a>
+                                <a href="/about">About</a>
+                            </div>
+                        </li>   
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- $###################  searchbar ###################################### -->
+
+    <div class="searchbar">
+        <div class="form container">
+            <form action="">
+                <i class="searchtool fa-solid fa-magnifying-glass" style="color: black;"></i>
+                <i class="cross-mark fa-solid fa-xmark"></i>
+                <input class="search" type="text" name="searchbar" id="" autocomplete="off"
+                    placeholder="Search for a movie, tv show....">
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- ######################################### showcase-section started #################################### -->
+    <div class="main-section">
+
+        <div class="showcase-section">
+
+            <div class="img-box">
+                <img src="../images/temp_waiting.png" alt="image not found">
+            </div>
+
+            <div class="text-box">
+                <!-- moviename -->
+                <!-- <h1 class="title">My Hero Academia: World Heroes' Mission </h1> -->
+
+                <!-- three in a row -->
+                <div class="li-wrapper">
+                    <!-- <li class="date">22-22-22</li> -->
+                    <!-- <li class="movie-genre"><span class="dots fa-solid fa-circle"></span>animation, action, drama</li> -->
+                    <!-- <li class="runtime">xh xxm</li> -->
+                </div>
+
+                <!-- two in a row -->
+                <div class="rating-trailer">
+                    <div class="rating">
+                        <!-- <p class="score">8.7</p> -->
+                        <p class="UR" style="font-size:1.6rem; font-weight: 700; word-spacing: 0px;">User Rating</p>
+                    </div>
+                    <!-- <div class="rating copy green"></div> -->
+                    <div class="play-trailer"><a class="play-trailer-button" href=""> <span
+                                style="margin: 0 7px 0 -8px;" class="fa-solid fa-play"></span>Watch Trailer</a></div>
+                </div>
+
+                <!--tagline  -->
+                <!-- <p class="tagline">The future is bright.</p> -->
+
+                <!-- overview heading -->
+                <!-- <p class="overview-title">Overview</p> -->
+
+                <!-- overview content -->
+                <!-- <p class="overview">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quidem, fuga,
+                    eaque quae
+                    ut obcaecati excepturi itaque optio reiciendis sed nisi natus enim doloribus. Sapiente totam, sed
+                    dolorum ea ad
+                    soluta neque at quibusdam iste temporibus tempore pariatur assumenda expedita itaque vitae sequi
+                    nesciunt,
+                    distinctio nulla tempora unde? Quae, modi?</p> -->
+
+                <!-- language spoken -->
+                <!-- <p class="language"><span>english</span> <span>japanese</span></p> -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- error handling in case of movie details not found for a particular movie id-->
+    <div class="not_found_details hide"></div>
+
+
+
+
+    <!-- ######################################## cast and crew section ################################### -->
+
+
+    <div class="cast-section">
+
+        <div class="title">
+            <p class="title-font-styling">Top Billed Cast
+            </p>
+        </div>
+
+
+        <div class="cast-boxwrapper">
+            <!-- a sample movie -->
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+            <div class="cast">
+
+                <div class="img-content">
+                    <img src="../images/temp_waiting.png" alt="img">
+                </div>
+
+                <div class="text-content">
+                    <!-- <p class="bold-title">Tom Holland</p> -->
+                    <!-- <p class="light-date">Spiderman</p> -->
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="extra-details">
+
+            <p class="title-font-styling" style="margin-bottom:2em ;">Additional Details</p>
+
+            <div class="ED og-title">
+                <p class="bold-title" style="font-weight: 600;">Original Title</p>
+                <p class="val">check</p>
+            </div>
+            <div class="ED status">
+                <p class="bold-title" style="font-weight: 600;">Status</p>
+                <p class="val">check</p>
+            </div>
+            <div class="ED og-language">
+                <p class="bold-title" style="font-weight: 600;">Original Language</p>
+                <p class="val">check</p>
+            </div>
+            <div class="ED budget">
+                <p class="bold-title" style="font-weight: 600;">Budget</p>
+                <p class="val">check</p>
+            </div>
+            <div class="ED budget">
+                <p class="bold-title" style="font-weight: 600;">Budget</p>
+                <p class="val">check</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ########## small side section for status etc original language########## -->
+
+
+
+    <!-- ######################################## footer section ################################### -->
+    <div class="footer-section">
+        <div class="logo-section">
+            <h2 class="logo-text">Binge⁐it</h2>
+        </div>
+        <div class="imp-links">
+            <div class="legal">
+                <h2>LEGAL</h2>
+                <a href="https://www.themoviedb.org/documentation/api">
+                    <p>API overview</p>
+                </a>
+                <a href="https://www.themoviedb.org/documentation/api/terms-of-use">
+                    <p>API Terms of Use</p>
+                </a>
+                <a href="https://developers.themoviedb.org/3">
+                    <p>API documentation</p>
+                </a>
+            </div>
+            <div class="sm-handles">
+                <h2>IMPORTANT LINKS</h2>
+                <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/">
+                    <p>LinkedIn</p>
+                </a>
+                <a href="https://twitter.com/themoviedb?lang=en">
+                    <p>Twitter</p>
+                </a>
+                <a href="https://www.facebook.com/themoviedb/">
+                    <p>Facebook</p>
+                </a>
+                <a href="">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="register">
+                <h2>Categories</h2>
+                <a href="/movie">
+                    <p>Adventure</p>
+                </a>
+                <a href="/movie">
+                    <p>Action</p>
+                </a>
+                <a href="./movie">
+                    <p>Documentary</p>
+                </a>
+                <a href="/movie">
+                    <p>Many More to Explore</p>
+                </a>
+            </div>
+        </div>
+        <div class="sm-handles-icon">
+            <a href="https://www.linkedin.com/in/abhishek-kumar-2b950a194/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/themoviedb?lang=en"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/themoviedb/"><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="copyright-text">
+            <p class="confession">Made with <i class="fa-solid fa-heart"></i> by Abhishek Kr.</p>
+            <p>Copyright © 2022, &nbsp all rights reserved to Movies Mania.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

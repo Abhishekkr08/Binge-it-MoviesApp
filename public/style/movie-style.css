@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&family=Staatliches&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    --scrollerGrey: 219, 219, 219;
+    --lightGrey: 227, 227, 227;
+    --darkerGrey: 200, 200, 200; 
+    --DarkBlue: 3, 37, 65;
+    --LightBlue: 1, 180, 228;
+    --LighterGreen: 192, 254, 207;
+    --LightGreen: 30, 213, 169;
+    --LogoGreen: 144, 206, 161;
+    --LogoOrange: 253, 193, 112;
+    --LogoRed: 217, 59, 99;
+    --accountSilver: 149, 149, 149;
+    --accountPink: 234, 20, 140;
+    --accountPurple: 128, 91, 231;
+    --accountGreen: 1, 210, 119;
+    --accountTeal: 1, 198, 172;
+    --accountLightBlue: 1, 180, 228;
+    --accountBlue: 1, 119, 210;
+    --accountOrange: 210, 119, 1;
+    --accountYellow: 210, 144, 1;
+    --accountRed: 212, 2, 66;
+    --imageBorderRadius: 8px;
+    --border1: 2px solid red;
+    --border2: 2px solid black;
+    --border3: 2px solid blue;
+    --thinborder: 1px solid green;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+/* #####################utitlity classes starts############################# */
+.navbar-container {
+    /*make separate container for navbar bcoz this navbar will be removed for small screens except for navbar*/
+    max-width: 1300px;
+    width: 90%;
+    /* border: var(--border2); */
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn1 {
+    display: inline-block;
+    background: rgb(1, 180, 228);
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 0.95em 1.8em;
+    border-radius: 35px;
+}
+
+.bold-title {
+    font-size: 1.6rem;
+    margin: 0.15em 0em -0.1em 0em;
+    font-weight: 700;
+    line-height: 1.35em;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+}
+
+.light-date {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6rem;
+}
+
+.title-font-styling {
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+
+
+/* ############################### navbar section ############################## */
+
+.navbar {
+    width: 100%;
+    height: 64px;
+    background-color: rgba(var(--DarkBlue), 1);
+    padding: 1em;
+}
+
+.navbar .boxwrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: var(--border3); */
+    padding: 0 3.5em;
+    position: relative;
+}
+
+.logo-text {
+    background: linear-gradient(to right, #c0fef9 10%, rgb(0, 221, 255) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-items li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar-items li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    margin: 1.2em;
+    font-weight: 600;
+}
+
+.navbar-search-icon {
+    /* border: var(--border1); */
+    color: cyan;
+    font-size: 1.7rem;
+    margin-left: 1em;
+    cursor: pointer;
+    /* padding: 0 0.5em; */
+    transition: all 300ms ease-in-out;
+
+}
+
+.navbar-items li a:hover {
+    color: cyan;
+}
+
+.navbar-search-icon:hover {
+    color: cyan;
+}
+
+
+
+.hamburger {
+    /* border: var(--border1); */
+    display: none;
+    margin-left: -5.3em;
+    position: absolute;
+    left: 110.7%;
+    top: -16.6%;
+}
+
+.hamburger-icon {
+    font-size: 2.35rem;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.hamburger-icon:hover {
+    color: cyan;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: rgba(var(--DarkBlue), 0.98);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 30px;
+    /* margin-top: 2em ; */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+#hamburger-sidemenu a {
+    padding: 8px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+#hamburger-sidemenu a:hover {
+    color: cyan;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 1.2%;
+    right: 1px;
+    font-size: 36px;
+    margin-left: 50px;
+    font-size: 2.6rem;
+    color: white;
+}
+
+.closebtn:hover {
+    color: cyan;
+}
+
+
+
+
+/* ############################### search bar section ########################### */
+
+.searchbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    ;
+    margin-top: 0px;
+    /* border: 2px solid red; */
+    height: 0px;
+    transition: all 400ms ease-in-out;
+    overflow: hidden;
+}
+
+.slide-down-searchbar1 {
+    height: 50px;
+    transition: all 400ms ease-in-out;
+}
+
+.form {
+    position: relative;
+}
+
+
+form {
+    width: 100%;
+    /* border: var(--border1); */
+}
+
+form input {
+    width: 100%;
+    border: none;
+    height: 45px;
+    padding-top: 3px;
+    padding-left: 43px;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #acacac;
+    word-spacing: 1.2px;
+}
+
+.form input::placeholder {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #acacac;
+    word-spacing: 1.2px;
+}
+
+.form input:focus {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #acacac;
+    word-spacing: 1.2px;
+    outline: none;
+}
+
+.searchtool {
+    position: absolute;
+    top: 23%;
+    left: 0;
+    margin-left: 10px;
+    font-size: 1.4rem;
+    /* border: 2px solid red; */
+}
+
+.form .cross {
+    position: absolute;
+    color: #acacaccf;
+    top: 18%;
+    right: 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0 1em;
+}
+
+.cross:hover {
+    color: #707070;
+}
+
+/* ############################### main-page section ############################## */
+
+.movies-list {
+    /* border: var(--border1); */
+    margin-top: 7em;
+}
+
+.list-boxwrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.genre-column {
+
+    min-width: 270px;
+    /* display: none; */
+    height: fit-content;
+    margin-right: 3em;
+    margin-top: -4em;
+}
+
+
+.genre-column .title {
+    padding: 1em 1.3em;
+    font-size: 1.9rem;
+    border-radius: 8px 8px 0px 0px;
+    background-color: rgba(var(--accountLightBlue), 1);
+    color: white;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.genre-item-container {
+    padding: 8px 0;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 0px 0px 8px 8px;
+    border-top: none;
+}
+
+.genre-item {
+    /* border: var(--border3); */
+    cursor: pointer;
+    padding: 0.55em 1.5em;
+    font-size: 1.65rem;
+}
+
+.genre-item-selector {
+    /*to be added thru js while clicking on a button*/
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.genre-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+
+}
+
+.movie-column {
+    /* border: var(--border2); */
+    /* max-width: 70% ; */
+    position: relative;
+    margin-top: -4em;
+    padding-top: 4px;
+    width: 100%;
+}
+
+
+.movie-item {
+    /* border: 2px solid cyan; */
+    display: flex;
+    margin-bottom: 2.2em;
+    height: 140px;
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+}
+
+.more {
+    margin-top: -0.5em;
+}
+
+.allMovies-load-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8em 1.7em;
+    margin-top: 1em;
+    font-size: 1.35rem;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: rgb(1, 180, 228);
+    border: 2px solid rgb(1, 180, 228);
+}
+
+.allMovies-load-more:hover {
+    transition: all 0.3s ease-in-out;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.btn-Deactivator {
+    display: none;
+}
+
+.movie-imgbox {
+    /* border: 2px solid magenta; */
+    max-width: 110px;
+    /* width: 400%; */
+}
+
+.movie-imgbox img {
+    border-radius: 8px 0px 0px 8px;
+    display: block;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie-textbox {
+    padding: 1.3em;
+    padding-top: 1em;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.movie-title {
+    /* border: 1px solid red; */
+    overflow-y: hidden;
+    height: 30px;
+}
+
+
+.movie-textbox .overview {
+    /* border: 2px solid magenta; */
+    height: 50px;
+    overflow-y: hidden;
+    margin-top: 0.75em;
+}
+
+
+
+
+
+
+/* ############################### footer section ############################## */
+
+
+.footer-section {
+    margin-top: 18em;
+    background-color: rgba(var(--DarkBlue));
+    /* border: var(--border2); */
+    color: white;
+    padding: 2em 2em 0em 2em;
+}
+
+.footer-section h2 {
+    font-size: 2.2rem;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.footer-section p {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+
+
+.logo-section {
+    text-align: center;
+    /* border: var(--border1); */
+    padding: 2em;
+    margin-bottom: 1.5em;
+}
+
+.imp-links {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.legal,
+.sm-handles,
+.register {
+    margin: 0 5em;
+    text-align: center;
+}
+
+i {
+    margin: 0.5em 1em;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.643);
+    transition: color 120ms ease-in-out;
+}
+
+i:hover {
+    color: cyan;
+
+}
+
+
+.sm-handles-icon {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-text {
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.copyright-text p {
+    font-size: 1.45rem;
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession {
+    color: rgba(255, 255, 255, 0.523);
+}
+
+.confession i {
+    margin: 0 0.2em;
+    font-size: 1.2rem;
+    color: rgb(240, 37, 37);
+    /* color: cyan; */
+}
+
+
+
+
+
+/* ###################################### media queries ##################################### */
+
+@media (max-width: 570px) {
+
+    .container {
+        width: 100%;
+    }
+    .logo-text{
+        margin-left: -1.12em;
+    }
+
+    /*to be used in other stylesheets too*/
+    .rifle {
+        display: none;
+    }
+
+    .navbar-items>.RN {
+        display: none;
+    }
+
+    .footer-section {
+        margin-top: 10em;
+    }
+
+    .legal,
+    .sm-handles,
+    .register {
+        margin: 2em;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: -7.1em;
+    }
+
+    .navbar-search-icon {
+        margin-right: 1.4em;
+    }
+
+}
+
+@media (min-width : 570px) and (max-width : 700px) {
+    .navbar-items>.RN {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: -7.5em;
+    }
+
+    .legal,
+    .sm-handles,
+    .register {
+        margin: 2em;
+    }
+
+}
+
+@media (max-width: 570px) {
+    /*to be used in other stylesheets too*/
+
+    .list-boxwrapper {
+        display: block;
+        /* border: var(--border1);  */
+        width: 97%;
+    }
+
+    .genre-column {
+        width: 100%;
+        margin-bottom: 6em;
+        margin-top: -5em;
+    }
+
+    .genre-item-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        /* border-radius: 30px; */
+    }
+
+    /* .movie-column {
+        position: relative;
+    }
+
+    .allMovies-load-more {
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+    } */
+
+    .genre-item {
+        border-radius: 25px;
+    }
+
+
+}
