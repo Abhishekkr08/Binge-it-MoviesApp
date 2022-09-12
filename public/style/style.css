@@ -1089,7 +1089,7 @@ iframe {
  
 
  .add-review{
-    margin-top: 4em;
+    margin-top: 7em;
     /* padding: 0 6.4em; */
 
 }
@@ -1101,10 +1101,14 @@ iframe {
     width: 100%;
     border: none;
     border-bottom: 1px solid rgb(173, 173, 173);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: rgb(110, 110, 110);
 }
 
 .form-section-review form input {
     height: 46px;
+    font-weight: 500;
     font-size: 1.6rem;
     color: rgb(110, 110, 110);
     padding-top: 1px;
@@ -1121,8 +1125,9 @@ iframe {
 }
 
 .form-section-review input:focus {
+    font-weight: 500;
     font-size: 1.6rem;
-    color: rgb(99, 99, 99);
+    color: rgb(110, 110, 110);
     outline: none;
 }
 
@@ -1137,6 +1142,7 @@ iframe {
     padding: 0.55em 1em;
     color: white;
     margin-right: 1em;
+    border-radius:20px;
     background-color: rgb(1, 180, 228);
     transition: all 200ms ease-in-out;
 }
@@ -1288,7 +1294,6 @@ i:hover {
 
 }
 
-
 @media (max-width : 570px){   
     .popular-section{
         margin-top: -2.4em;
@@ -1332,6 +1337,20 @@ i:hover {
 
     .watch-trailer{
         margin-top: 4em;
+    }
+
+    .reviews-section{
+        width: 100%;
+    }
+    .reviews-section{
+        padding: 0 0.6em;
+    }
+    .reviews-section .title{
+        margin-left: 2em;
+    }
+    .reviews-model{
+        padding-bottom: 1.7em;
+        padding-top: 1em;
     }
 
 }
